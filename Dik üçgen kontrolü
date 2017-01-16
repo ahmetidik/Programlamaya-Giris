@@ -1,0 +1,17 @@
+#_*_ coding:cp1254 _*_
+def hesapla():
+    try:
+        a=input('Birinci kenarı giriniz: ')
+        b=input('İkinci kenarı giriniz: ')
+        c=input('Üçüncü kenarı giriniz: ')
+    except NameError :
+        print 'Nümerik bir değer giriniz'
+        hesapla()
+    except SyntaxError :
+        print 'Bir değer giriniz'
+        hesapla()
+    if a*a+b*b==c*c :
+        print 'Bu bir dik üçgendir.'
+    else :
+        print 'Bu bir dik üçgen değildir'
+hesapla()
